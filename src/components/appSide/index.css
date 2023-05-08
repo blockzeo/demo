@@ -1,0 +1,12 @@
+.App-side{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.side-one{
+  border: 1px solid #222;
+  border-bottom:0px;
+}
+.App-side a:last-child .side-one{
+  border-bottom: 1px solid #222;
+}
