@@ -14,7 +14,7 @@ class Index extends Component {
   constructor(){
     super();
     this.state = {
-
+1:1
     }
     store.subscribe(() => this.setState({1:1}))
     this.getData();
