@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import request from '../../api/index.js'
+import { withRouter } from 'react-router-dom';
 
 class Ovewrview extends Component {
   constructor(){
+    super();
     this.state = {
 
     }
@@ -13,6 +15,7 @@ class Ovewrview extends Component {
     console.log(data)
   }
   render(){
+    console.log(this.props);
     return (
       <div>
         overview
@@ -21,4 +24,4 @@ class Ovewrview extends Component {
   }
 }
 
-export default Ovewrview;
+export default withRouter(Ovewrview);

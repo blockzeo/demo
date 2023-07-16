@@ -14,25 +14,26 @@ class Index extends Component {
   constructor(){
     super();
     this.state = {
-1:1
+        1:1
     }
     store.subscribe(() => this.setState({1:1}))
     this.getData();
   }
   getData = async () => {
-    const data = await request.get("ShowStaff")
+    const data = await request.get("getData")
   }
   render(){
     const storeState = store.getState();
     return (
       <Router>
         <div className="App">
+          <div className="header">header</div>
+          <div className="main">
           <AppSide />
           <Switch>
             {Routers.map(item => {
               const RouteView = item.component;
               return <Route path={'/' + item.key} render={props => {
-                console.log(RouteView)
                   return <div className="app-view">
                     <RouteView />
                   </div>
@@ -40,6 +41,7 @@ class Index extends Component {
               }></Route>
             })}
           </Switch>
+          </div>
         </div>
       </Router>
     );
